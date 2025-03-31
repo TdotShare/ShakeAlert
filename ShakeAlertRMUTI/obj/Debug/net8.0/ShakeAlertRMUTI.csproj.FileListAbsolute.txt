@@ -1,0 +1,17 @@
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\bin\Debug\net8.0\ShakeAlertRMUTI.exe
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\bin\Debug\net8.0\ShakeAlertRMUTI.deps.json
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\bin\Debug\net8.0\ShakeAlertRMUTI.runtimeconfig.json
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\bin\Debug\net8.0\ShakeAlertRMUTI.dll
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\bin\Debug\net8.0\ShakeAlertRMUTI.pdb
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\obj\Debug\net8.0\ShakeAlertRMUTI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\obj\Debug\net8.0\ShakeAlertRMUTI.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\obj\Debug\net8.0\ShakeAlertRMUTI.AssemblyInfo.cs
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\obj\Debug\net8.0\ShakeAlertRMUTI.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\obj\Debug\net8.0\ShakeAlertRMUTI.dll
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\obj\Debug\net8.0\refint\ShakeAlertRMUTI.dll
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\obj\Debug\net8.0\ShakeAlertRMUTI.pdb
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\obj\Debug\net8.0\ShakeAlertRMUTI.genruntimeconfig.cache
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\obj\Debug\net8.0\ref\ShakeAlertRMUTI.dll
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\obj\Debug\net8.0\ShakeAlertRMUTI.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\obj\Debug\net8.0\ShakeAle.1F9822B8.Up2Date
