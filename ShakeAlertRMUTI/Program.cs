@@ -10,7 +10,7 @@ double minMagnitude = 4.5; // ขนาดแผ่นดินไหวขั�
 string url = getUrlEarthquake(latitude , longitude , radiusKm);
 
 string serviceMsTeamsAPI = "https://sport.rmuti.ac.th/serviceMsTeams/public/api/createMessage";
-string webHookId         = "https://rmuti365.webhook.office.com/webhookb2/a40f81e9-fe0b-40e9-94a9-39639e276e7b@733e2ce0-ce28-4dfa-8af6-ad57b37090ce/IncomingWebhook/9147d81463294376b6b97c0b1a7515f1/abc7d249-cfd9-4c3a-abf9-076e9a90cd87/V2zmFw7UU_7Do6UDGrJkEl8I82I5XDiExQhqlXZ8x15mU1";
+string webHookId         = "https://rmuti365.webhook.office.com/webhookb2/b6b8e9d0-0f5d-498c-8e03-acde1e64840d@733e2ce0-ce28-4dfa-8af6-ad57b37090ce/IncomingWebhook/3eb8cdf600294a92ae17bfdd7a765259/abc7d249-cfd9-4c3a-abf9-076e9a90cd87/V2vVvQK1nuZjslX-2zc-Y4nSInYXKbtQmDVFcbcq1NZus1";
 
 using (HttpClient client = new HttpClient())
 {
@@ -53,11 +53,11 @@ using (HttpClient client = new HttpClient())
                     type = "primary",
                     title = "การแจ้งเตือนแผ่นดินไหว RMUTI",
                     message = $"📍สถานที่: {place} | " +
-                $"📏 ขนาด: {magnitude} แมกนิจูด |" +
-                $" ⏰ เวลา: {dateTime}",
+                    $"📏 ขนาด: {magnitude} แมกนิจูด |" +
+                    $" ⏰ เวลา: {dateTime}",
                     button = new string[2] { "รายละเอียด", urlDetail }
                 };
-
+                
                 var content = ConvertToFormUrlEncodedContent(msTeamsCallData);
 
                 content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/x-www-form-urlencoded");
@@ -65,30 +65,14 @@ using (HttpClient client = new HttpClient())
 
                 // ส่งคำขอ HTTP แบบ POST
                 var response = await client.PostAsync(serviceMsTeamsAPI, content);
-                Console.WriteLine(await response.Content.ReadAsStringAsync());
-
+                
             }
         }
 
         if (!found)
         {
             //✅ ไม่มีแผ่นดินไหวที่มีขนาดมากกว่า {minMagnitude} ในรัศมี {radiusKm} กม.
-
-            var msTeamsCallData = new MsTeamsCallData()
-            {
-                webHookId = webHookId,
-                type = "success",
-                title = "การแจ้งเตือนแผ่นดินไหว RMUTI",
-                message = $"ไม่มีแผ่นดินไหวที่มีขนาดมากกว่า {minMagnitude} ในรัศมี {radiusKm} กม",
-            };
-
-            var content = ConvertToFormUrlEncodedContent(msTeamsCallData);
-
-            content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/x-www-form-urlencoded");
-            client.DefaultRequestHeaders.Add("User-Agent", "MyAgent/1.0");
-
-            // ส่งคำขอ HTTP แบบ POST
-            var response = await client.PostAsync(serviceMsTeamsAPI, content);
+            Console.WriteLine($"There have been no earthquakes greater than {minMagnitude} magnitude within a radius of {radiusKm}.");
         }
     }
     catch (Exception e)
@@ -96,6 +80,9 @@ using (HttpClient client = new HttpClient())
 
     }
 }
+
+Thread.Sleep(5000); // หน่วงเวลาให้อ่านข้อความก่อนปิด
+Environment.Exit(0);
 
 FormUrlEncodedContent ConvertToFormUrlEncodedContent(object obj)
 {
@@ -123,10 +110,14 @@ FormUrlEncodedContent ConvertToFormUrlEncodedContent(object obj)
 }
 string getUrlEarthquake(double latitude , double longitude , double radiusKm)
 {
+    
     string url = $"https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson" +
-             $"&latitude={latitude}" +
-             $"&longitude={longitude}" +
-             $"&maxradiuskm={radiusKm}" +
-             $"&limit=5"; // จำกัดข้อมูลที่ดึงมา 20 รายการ
-   return url ;
+                $"&latitude={latitude}" +
+                $"&longitude={longitude}" +
+                $"&maxradiuskm={radiusKm}" +
+                $"&starttime=NOW-1minute" +
+                $"&endtime=NOW" +
+                $"&limit=5";
+    Console.WriteLine(url);
+    return url ;
 }

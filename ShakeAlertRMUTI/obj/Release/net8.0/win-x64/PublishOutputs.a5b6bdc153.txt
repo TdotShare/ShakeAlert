@@ -1,0 +1,6 @@
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\bin\Release\net8.0\publish\win-x64\ShakeAlertRMUTI.exe
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\bin\Release\net8.0\publish\win-x64\ShakeAlertRMUTI.dll
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\bin\Release\net8.0\publish\win-x64\ShakeAlertRMUTI.deps.json
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\bin\Release\net8.0\publish\win-x64\ShakeAlertRMUTI.runtimeconfig.json
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\bin\Release\net8.0\publish\win-x64\ShakeAlertRMUTI.pdb
+C:\Users\Admin\source\repos\ShakeAlertRMUTI\ShakeAlertRMUTI\bin\Release\net8.0\publish\win-x64\Newtonsoft.Json.dll
